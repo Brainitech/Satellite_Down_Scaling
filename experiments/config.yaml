@@ -1,0 +1,36 @@
+# -------------------------------
+# Data paths
+# -------------------------------
+data:
+  modis: data/processed/modis_sequences
+  landsat: data/processed/landsat_aligned
+
+# -------------------------------
+# Training configuration
+# -------------------------------
+train:
+  batch_size: 1
+  epochs: 50
+  lr: 0.0002
+  save_every: 5
+
+# -------------------------------
+# Logging and checkpoints
+# -------------------------------
+log:
+  ckpt_dir: experiments/checkpoints
+  log_dir: experiments/logs
+
+# -------------------------------
+# Evaluation settings
+# -------------------------------
+eval:
+  checkpoint: experiments/checkpoints/model_epoch_50.pth # Change as needed
+
+# -------------------------------
+# Inference settings
+# -------------------------------
+inference:
+  checkpoint: experiments/checkpoints/model_epoch_50.pth # Reuse eval ckpt or another
+  modis_input_dir: data/processed/modis_sequences # Directory of unseen MODIS inputs
+  save_dir: results/predictions # Where to save .tif outputs

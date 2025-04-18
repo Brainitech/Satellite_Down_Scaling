@@ -1,0 +1,25 @@
+# --- PyTorch with CUDA 12.1 ---
+# You MUST install these via pip manually with correct index (see instructions below)
+#torch==2.2.0+cu121
+#torchvision==0.17.0+cu121
+
+# --- Core dependencies ---
+numpy
+pillow
+scikit-image
+tqdm
+pyyaml
+
+# --- Training and metrics ---
+torchmetrics
+
+# --- Visualization ---
+matplotlib
+tensorboard
+
+# --- Geospatial / TIFF image support ---
+rasterio
+# gdal
+
+# --- Optional utilities ---
+opencv-python
